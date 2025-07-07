@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Núcleo - Plataforma de Produtividade e Organização</title>
+    <meta name="description" content="Organize suas ideias, gerencie tarefas e conecte conhecimentos com o Núcleo. A plataforma completa para produtividade pessoal e profissional.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <div class="nucleus-icon"></div>
+                <h1>Núcleo</h1>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <p>Carregando sua plataforma de produtividade...</p>
+        </div>
+    </div>
+
+    <!-- Home Screen -->
+    <div id="home-screen" class="screen">
+        <header class="home-header">
+            <nav class="navbar">
+                <div class="nav-brand">
+                    <div class="nucleus-icon"></div>
+                    <span>Núcleo</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#features">Funcionalidades</a>
+                    <a href="#about">Sobre</a>
+                    <a href="#contact">Contato</a>
+                </div>
+            </nav>
+        </header>
+
+        <main class="home-main">
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Organize suas ideias.<br>
+                        <span class="gradient-text">Conecte conhecimentos.</span><br>
+                        Alcance seus objetivos.
+                    </h1>
+                    <p class="hero-description">
+                        O Núcleo é a plataforma completa que combina notas interligadas, 
+                        gerenciamento de tarefas e controle financeiro em uma interface 
+                        minimalista e poderosa.
+                    </p>
+                    <div class="hero-cta">
+                        <button onclick="showModeSelection()" class="btn-primary-large">
+                            Começar Agora
+                        </button>
+                        <button onclick="scrollToFeatures()" class="btn-secondary-large">
+                            Ver Funcionalidades
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="floating-cards">
+                        <div class="floating-card note-card-demo">
+                            <h4>💡 Ideias do Projeto</h4>
+                            <p>Conectar com [[Planejamento]]...</p>
+                        </div>
+                        <div class="floating-card task-card-demo">
+                            <h4>✅ Revisar Documentação</h4>
+                            <span class="priority high">Alta Prioridade</span>
+                        </div>
+                        <div class="floating-card expense-card-demo">
+                            <h4>💰 Gastos do Mês</h4>
+                            <p>R$ 1.247,50</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mode Selection -->
+            <section id="mode-selection" class="mode-selection hidden">
+                <div class="mode-header">
+                    <h2>Como você vai usar o Núcleo?</h2>
+                    <p>Escolha a experiência que melhor se adapta às suas necessidades</p>
+                </div>
+                <div class="mode-cards">
+                    <div class="mode-card personal" onclick="selectMode('personal')">
+                        <div class="mode-icon">👤</div>
+                        <h3>Uso Pessoal</h3>
+                        <p>Organize sua vida pessoal, estudos e projetos individuais</p>
+                        <ul class="mode-features">
+                            <li>📝 Notas pessoais interligadas</li>
+                            <li>✅ Tarefas e metas individuais</li>
+                            <li>💰 Controle de gastos pessoais</li>
+                            <li>📊 Dashboard de produtividade</li>
+                            <li>🔗 Sistema de links entre ideias</li>
+                        </ul>
+                        <div class="mode-cta">
+                            <span>Começar Uso Pessoal</span>
+                            <div class="arrow">→</div>
+                        </div>
+                    </div>
+
+                    <div class="mode-card professional" onclick="selectMode('professional')">
+                        <div class="mode-icon">🏢</div>
+                        <h3>Uso Profissional</h3>
+                        <p>Gerencie sua startup, equipe e projetos empresariais</p>
+                        <ul class="mode-features">
+                            <li>🚀 Gestão de projetos e metas</li>
+                            <li>👥 Colaboração em equipe</li>
+                            <li>📈 KPIs e métricas de crescimento</li>
+                            <li>💼 Orçamento e controle financeiro</li>
+                            <li>⚡ Automações e integrações</li>
+                        </ul>
+                        <div class="mode-cta">
+                            <span>Começar Uso Profissional</span>
+                            <div class="arrow">→</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section id="features" class="features-section">
+                <div class="features-header">
+                    <h2>Funcionalidades Poderosas</h2>
+                    <p>Tudo que você precisa para organizar sua vida e trabalho</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🧠</div>
+                        <h3>Notas Interligadas</h3>
+                        <p>Crie conexões entre suas ideias como no Obsidian. Use [[links]] para navegar entre conceitos e construir uma rede de conhecimento.</p>
+                        <ul>
+                            <li>Sistema de links bidirecionais</li>
+                            <li>Tags e categorização</li>
+                            <li>Busca avançada</li>
+                            <li>Visualização em grafo</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">✅</div>
+                        <h3>Gestão de Tarefas</h3>
+                        <p>Organize projetos com quadros Kanban, defina prioridades e acompanhe o progresso em tempo real.</p>
+                        <ul>
+                            <li>Quadros Kanban personalizáveis</li>
+                            <li>Prioridades e etiquetas</li>
+                            <li>Datas de vencimento</li>
+                            <li>Relatórios de produtividade</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">💰</div>
+                        <h3>Controle Financeiro</h3>
+                        <p>Monitore gastos, defina orçamentos e mantenha suas finanças organizadas com relatórios detalhados.</p>
+                        <ul>
+                            <li>Categorização automática</li>
+                            <li>Gráficos e relatórios</li>
+                            <li>Metas de economia</li>
+                            <li>Alertas de orçamento</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>Analytics Avançado</h3>
+                        <p>Acompanhe sua produtividade com métricas detalhadas e insights personalizados.</p>
+                        <ul>
+                            <li>Dashboard personalizado</li>
+                            <li>Métricas de produtividade</li>
+                            <li>Relatórios automáticos</li>
+                            <li>Insights inteligentes</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🔄</div>
+                        <h3>Sincronização</h3>
+                        <p>Acesse seus dados em qualquer dispositivo com sincronização automática e backup seguro.</p>
+                        <ul>
+                            <li>Sync em tempo real</li>
+                            <li>Backup automático</li>
+                            <li>Acesso offline</li>
+                            <li>Exportação de dados</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <h3>Interface Minimalista</h3>
+                        <p>Design limpo e intuitivo que não distrai, focado na sua produtividade e bem-estar.</p>
+                        <ul>
+                            <li>Design responsivo</li>
+                            <li>Modo escuro/claro</li>
+                            <li>Atalhos de teclado</li>
+                            <li>Personalização completa</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="about-section">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>Sobre o Núcleo</h2>
+                        <p>
+                            O Núcleo nasceu da necessidade de ter uma ferramenta que combinasse 
+                            o melhor do Notion, Obsidian e Trello em uma única plataforma. 
+                            Desenvolvido com foco na simplicidade e eficiência, o Núcleo 
+                            ajuda você a organizar pensamentos, gerenciar projetos e 
+                            alcançar seus objetivos.
+                        </p>
+                        <p>
+                            Nossa missão é democratizar o acesso a ferramentas de produtividade 
+                            poderosas, mantendo a simplicidade e elegância no design.
+                        </p>
+                        <div class="about-stats">
+                            <div class="stat">
+                                <span class="stat-number">10k+</span>
+                                <span class="stat-label">Usuários Ativos</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">50k+</span>
+                                <span class="stat-label">Notas Criadas</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">99.9%</span>
+                                <span class="stat-label">Uptime</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-visual">
+                        <div class="about-image">
+                            <div class="productivity-illustration">
+                                <div class="illustration-element brain"></div>
+                                <div class="illustration-element connections"></div>
+                                <div class="illustration-element tasks"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <div class="nucleus-icon"></div>
+                        <h3>Núcleo</h3>
+                        <p>A plataforma completa para organização e produtividade</p>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <div class="footer-column">
+                            <h4>Produto</h4>
+                            <a href="#features">Funcionalidades</a>
+                            <a href="#pricing">Preços</a>
+                            <a href="#updates">Atualizações</a>
+                            <a href="#roadmap">Roadmap</a>
+                        </div>
+                        
+                        <div class="footer-column">
+                            <h4>Recursos</h4>
+                            <a href="#docs">Documentação</a>
+                            <a href="#tutorials">Tutoriais</a>
+                            <a href="#templates">Templates</a>
+                            <a href="#community">Comunidade</a>
+                        </div>
+                        
+                        <div class="footer-column">
+                            <h4>Empresa</h4>
+                            <a href="#about">Sobre</a>
+                            <a href="#blog">Blog</a>
+                            <a href="#careers">Carreiras</a>
+                            <a href="#press">Imprensa</a>
+                        </div>
+                        
+                        <div class="footer-column">
+                            <h4>Suporte</h4>
+                            <a href="#help">Central de Ajuda</a>
+                            <a href="#contact">Contato</a>
+                            <a href="#status">Status</a>
+                            <a href="#privacy">Privacidade</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-social">
+                    <div class="social-links">
+                        <a href="https://instagram.com/nucleostartup_" target="_blank" class="social-link instagram">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                            @nucleostartup_
+                        </a>
+                        
+                        <a href="mailto:nucleostartup@gmail.com" class="social-link email">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                            nucleostartup@gmail.com
+                        </a>
+                        
+                        <a href="https://twitter.com/nucleostartup_" target="_blank" class="social-link twitter">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                            </svg>
+                            @nucleostartup_
+                        </a>
+                        
+                        <a href="https://linkedin.com/company/nucleostartup" target="_blank" class="social-link linkedin">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                            Núcleo Startup
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <div class="footer-copyright">
+                        <p>&copy; 2024 Núcleo. Todos os direitos reservados.</p>
+                        <p class="developer-credit">Desenvolvido com ❤️ por <strong>prelisb</strong></p>
+                    </div>
+                    <div class="footer-legal">
+                        <a href="#terms">Termos de Uso</a>
+                        <a href="#privacy">Política de Privacidade</a>
+                        <a href="#cookies">Cookies</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Entrar no Núcleo</h2>
+                <button class="modal-close" onclick="closeModal('login-modal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="login-form">
+                    <div class="form-group">
+                        <label class="form-label" for="login-email">Email</label>
+                        <input class="form-input" type="email" id="login-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="login-password">Senha</label>
+                        <input class="form-input" type="password" id="login-password" required>
+                    </div>
+                    <div id="login-error" class="alert alert-danger hidden"></div>
+                    <button type="submit" class="btn btn-primary btn-lg">Entrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Criar Conta</h2>
+                <button class="modal-close" onclick="closeModal('register-modal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="register-form">
+                    <div class="form-group">
+                        <label class="form-label" for="register-name">Nome</label>
+                        <input class="form-input" type="text" id="register-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="register-email">Email</label>
+                        <input class="form-input" type="email" id="register-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="register-password">Senha</label>
+                        <input class="form-input" type="password" id="register-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="register-mode">Modo de Uso</label>
+                        <select class="form-input form-select" id="register-mode" required>
+                            <option value="">Selecione...</option>
+                            <option value="personal">Pessoal</option>
+                            <option value="professional">Profissional</option>
+                        </select>
+                    </div>
+                    <div id="register-error" class="alert alert-danger hidden"></div>
+                    <button type="submit" class="btn btn-primary btn-lg">Criar Conta</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Workspace -->
+    <div id="workspace" class="screen">
+        <!-- Workspace content will be loaded here -->
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/workspace.js"></script>
+    <script src="js/notes.js"></script>
+    <script src="js/tasks.js"></script>
+    <script src="js/expenses.js"></script>
+    <script src="js/analytics.js"></script>
+    <script src="js/utils.js"></script>
+</body>
+</html>
